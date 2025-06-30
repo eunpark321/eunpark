@@ -3,76 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>은가은 & 박현호 </title>
+  <title>은가은 & 박현호</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin:0; background:#fdfdfd; color:#333; }
-    header { background:#b8e5f9; color:#ffffff; padding:20px; text-align:center; }
-    h1 { margin:0; font-size:2em; }
-    .banner { text-align:center; margin:20px 0; }
-    .banner img { max-width:90%; height:auto; border-radius:8px; }
-    .container { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:20px; }
-    .profile { background:#fff; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); width:100%; max-width:600px; padding:20px; }
-    .profile h2 { border-bottom:2px solid #eee; padding-bottom:10px; margin-bottom:15px; }
-    .profile ul { list-style:none; padding-left:0; }
-    .profile li { margin-bottom:10px; }
-    iframe { width:100%; height:315px; border:none; border-radius:8px; margin-bottom:15px; }
-    .calendar { background:#fff; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); padding:20px; max-width:600px; }
-    .calendar h3 { margin-top:0; }
-    .event { margin-bottom:10px; }
-    .event time { font-weight:bold; }
-    a { color:#1a73e8; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    @media(max-width:600px) {.container { flex-direction:column; align-items:center; }}
+    body {
+      font-family: 'Gowun Dodum', sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-color: #b8e5f9;
+      color: #333;
+      padding: 40px 20px 30px;
+      text-align: center;
+      border-bottom: 4px solid #a0d8f0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 10px 0 5px;
+      font-size: 1.1em;
+    }
+
+    .btn-link {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 18px;
+      background: #ffffff;
+      color: #0077aa;
+      font-weight: bold;
+      border: 2px solid #a0d8f0;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-link:hover {
+      background: #a0d8f0;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 20px;
+    }
+
+    .profile, .calendar {
+      background: #f9fdff;
+      border: 2px solid #b8e5f9;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 150, 200, 0.08);
+      max-width: 600px;
+      width: 100%;
+      padding: 25px;
+      transition: transform 0.2s;
+    }
+
+    .profile:hover, .calendar:hover {
+      transform: translateY(-4px);
+    }
+
+    .profile h2 {
+      font-size: 1.6em;
+      color: #0077aa;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      color: #0077aa;
+    }
+
+    .calendar p {
+      margin: 6px 0;
+    }
+
+    a {
+      color: #0077aa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        flex-direction: column;
+        padding: 20px 15px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>은가은 & 박현호</h1>
-    <p>가수 은가은 & 박현호 방송 및 행사 등 섭외 문의 : 010-5029-2608</p>
- <p><a href="https://open.kakao.com/o/sUzoA81g">섭외 문의 오픈 채팅 바로가기</a></p>
-
+    <p>가수 방송 및 행사 섭외 문의 : <a href="tel:01050292608">010-5029-2608</a></p>
+    <a class="btn-link" href="https://open.kakao.com/o/sUzoA81g" target="_blank">💬 오픈채팅 문의하기</a>
   </header>
 
-
   <div class="container">
-    <!-- 은가은 프로필 + 영상 -->
+
+    <!-- 은가은 프로필 -->
     <div class="profile">
       <h2>은가은 (EUN GAEUN)</h2>
       <ul>
         <li><strong>생일:</strong> 8월 26일</li>
         <li><strong>신장:</strong> 161cm</li>
-        <li><strong>활동:</strong> 미스트롯2 TOP7, KBS라디오 은가은의 빛나는 트로트DJ, BTR골프웨어 광고모델 등</li>
-        <li><strong>SNS:</strong> <a href="https://instagram.com/eungaeun1" target="_blank">Instagram</a> | <a href="https://linktr.ee/eungaeun1" target="_blank">Linktree</a></li>
+        <li><strong>활동:</strong> 미스트롯2 TOP7, KBS라디오 은가은의 빛나는 트로트 DJ, BTR골프웨어 광고모델 등</li>
+        <li><strong>SNS:</strong> 
+          <a href="https://instagram.com/eungaeun1" target="_blank">Instagram</a> | 
+          <a href="https://linktr.ee/eungaeun1" target="_blank">Linktree</a>
+        </li>
       </ul>
       <h3>🎬 주요 영상</h3>
-      <iframe src="https://www.youtube.com/embed/Ho5sUxFtt_w?si=mwEPtPpOvzGEHtiw&amp;controls=0" title="미스트롯2 바람의 노래-은가은"></iframe>
+      <iframe src="https://www.youtube.com/embed/Ho5sUxFtt_w?controls=0" title="미스트롯2 바람의 노래-은가은"></iframe>
       <iframe src="https://www.youtube.com/embed/-1Uzf-RJK0M" title="은가은 예능 모음"></iframe>
-      <iframe src="https://www.youtube.com/embed/MJDFoUhz-mU?si=cQX8PEjHghj_LEoT&amp;controls=0" title="은가은 예능 - Tears 커버"></iframe>
+      <iframe src="https://www.youtube.com/embed/MJDFoUhz-mU?controls=0" title="은가은 Tears 커버"></iframe>
 
-    <!-- 은가은 스케줄 캘린더 -->
-    <aside class="calendar">
-      <h3>📅 은가은 팬카페 스케줄</h3>
-         <p>※ 다음 팬카페 스케줄 확인 필수</p>
-      <p><a href="https://cafe.daum.net/eungaeun1/ajri" target="_blank">다음 팬카페 바로 가기</a></p>
-    </aside>
+  <h3>📅 은가은 팬카페 일정</h3>
+  <p>※ 다음 팬카페에서 일정 확인 필수</p>
+  <a class="btn-link" href="https://cafe.daum.net/eungaeun1/ajri" target="_blank">📅 팬카페 바로가기</a>
 
-      </div>
+</div>
 
-    <!-- 박현호 프로필 + 영상 -->
+    <!-- 박현호 프로필 -->
     <div class="profile">
       <h2>박현호 (PARK HYUNHO)</h2>
       <ul>
         <li><strong>생일:</strong> 5월 1일</li>
         <li><strong>신장:</strong> 179cm</li>
-        <li><strong>활동:</strong> 불타는 트롯맨 준결승, 뮤지컬 & 예능 다수 출연 (신랑수업 등) </li>
-        <li><strong>SNS:</strong> <a href="https://instagram.com/oop2h" target="_blank">Instagram</a> | <a href="https://linktr.ee/hyunhopark" target="_blank">Linktree</a></li>
+        <li><strong>활동:</strong> 불타는 트롯맨 준결승, 뮤지컬/예능 다수 출연</li>
+        <li><strong>SNS:</strong> 
+          <a href="https://instagram.com/oop2h" target="_blank">Instagram</a> | 
+          <a href="https://linktr.ee/hyunhopark" target="_blank">Linktree</a>
+        </li>
       </ul>
       <h3>🎬 주요 영상</h3>
-      <iframe src="https://www.youtube.com/embed/52kT7_6FhjM?si=Fvw_-fsQgnlsQ3Ot&amp;controls=0" title="불타는 트롯맨 꽃바람 - 박현호"></iframe>
+      <iframe src="https://www.youtube.com/embed/52kT7_6FhjM?controls=0" title="불타는 트롯맨 꽃바람 - 박현호"></iframe>
       <iframe src="https://www.youtube.com/embed/4n4XGq8TPlU" title="1,2,3 Go! MV"></iframe>
-      <iframe src="https://www.youtube.com/embed/IQyWWthr-uE?si=1-C-NE2tBPr0cWh4&amp;controls=0" title="은가은&박현호 듀엣 무대 (당신을 만나) "></iframe>
- 
+      <iframe src="https://www.youtube.com/embed/IQyWWthr-uE?controls=0" title="은가은&박현호 듀엣 무대 (당신을 만나)"></iframe>
+
+
   </div>
 
 </body>
